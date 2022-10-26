@@ -806,8 +806,5 @@ footer .redes-sociales a:hover{
     .ubicacion .ubicacion-map iframe{        
         width: 300px;
         height: 300px;
-    }
-    footer{
-        width: 320px;
-    }
+    }    
 }
