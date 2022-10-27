@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,900&display=swap');
+
+/*----------------RESET--------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------Grilla------------------*/
+
+.grid-contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 56px auto 70px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";     
+}
+
+/*------------------Clases generales------------*/
+
+/*----Ejemplo----*/
+.titulo-principal{
+    color: aliceblue;
+}
+/*------------------*/

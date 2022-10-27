@@ -2,15 +2,15 @@
 
 /*----------------RESET--------------------*/
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 /*------------------------------------------*/
 
-.grid-contenedor{
+/* .grid-contenedor{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 56px auto 70px;
@@ -20,7 +20,7 @@
         "header header"
         "main main"
         "footer footer";     
-}
+} */
 
 /*----------------HEADER----------------------*/
 
