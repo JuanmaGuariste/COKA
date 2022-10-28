@@ -21,6 +21,50 @@
   color: aliceblue; }
 
 /*------------------*/
+/*----------------INDEX-MAIN----------------------*/
+main {
+  grid-area: main; }
+  main .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.51)), url("../img/fondo-index.jpg");
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; }
+    main .hero div {
+      color: #F0E7D8;
+      text-align: center; }
+      main .hero div h2 {
+        font-size: 55px;
+        padding: 10px;
+        margin-bottom: 40px;
+        margin-left: 45px;
+        width: 550px;
+        height: auto; }
+      main .hero div p {
+        margin-bottom: 100px;
+        font-size: 30px;
+        color: white; }
+      main .hero div a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #000000;
+        font-size: 20px;
+        padding: 15px;
+        box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+        transition-property: color;
+        transition-duration: 0.3s; }
+        main .hero div a:hover {
+          color: #693f3f; }
+
 /*--------------------------------MEDIA QUERIES--------------------*/
 @media screen and (max-width: 1250px) {
   /*--------------------------------Index--------------------*/

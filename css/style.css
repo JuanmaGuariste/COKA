@@ -70,7 +70,7 @@ h2{
 
 /*----------------INDEX-MAIN----------------------*/
 
-main{
+/* main{
     grid-area: main;
 }
 
@@ -124,7 +124,7 @@ main{
 
 .hero div a:hover{
     color: #693f3f;      
-}
+} */
 
 .titulo-bienvenidos  h2{
     font-size: 35px;
