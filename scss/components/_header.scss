@@ -1,1 +1,40 @@
 @import "../base/variables";
+
+/*----------------HEADER----------------------*/
+
+header{
+    grid-area: header;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    nav{
+        .container-fluid{
+            h1{
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 25px;
+                margin: 0px;
+                padding-right: 50px;
+            }
+            .navbar-toggler{
+                background-color: rgba(136, 136, 136, 0.37);
+                border-color: rgba(255, 255, 255, 0.055);
+            }
+            #navbarNavAltMarkup{
+                .navbar-nav{
+                    flex: 1;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 10px; 
+                    padding-right: 50px;
+                    .nav-link{
+                        color: white;
+                        &:hover {
+                            color: #693f3f; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

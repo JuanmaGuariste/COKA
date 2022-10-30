@@ -2,249 +2,324 @@
 /*--------------------------------MEDIA QUERIES--------------------*/
 
 @media screen and (max-width:1250px){
-
-    /*--------------------------------Index--------------------*/
-
-    .titulo-bienvenidos .bienvenidos .bienvenidos-img img:nth-child(2){        
-        display: none;
+    main{
+        /*--------------------------------Index--------------------*/
+        .titulo-bienvenidos{
+            .bienvenidos{
+                .bienvenidos-img{
+                    img:nth-child(2){
+                        display: none;
+                    }
+                }
+            } 
+        }       
+        .ubicacion{
+            .ubicacion-map{
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 500px;
+                p{
+                    text-align: center;     
+                } 
+            }
+        }    
+        /*--------------------------------Conócenos--------------------*/
+        .titulo-conocenos{
+            .consultorio{ 
+                .consultorio-img{
+                    img:nth-child(2){
+                        display: none;
+                    }
+                }
+            }
+        }    
+        /*--------------------------------Servicios--------------------*/
+        .titulo-servicios{ 
+            .especialidad-contenedor{
+                .especialidad{ 
+                    .especialidad-img{
+                        flex-direction: column; 
+                        img:nth-child(1){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }   
+        .servicios{
+            .tratamientos{
+                .tecnica{
+                    margin: 15px;
+                    img{
+                        width: 400px;
+                        height: auto;
+                    }
+                }
+            }
+        }
     }
-
-    .ubicacion .ubicacion-map{
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 500px;
-    }
-
-    .ubicacion .ubicacion-map p{
-        text-align: center;        
-    }
-
-    /*--------------------------------Conócenos--------------------*/
-
-    .titulo-conocenos .consultorio .consultorio-img img:nth-child(2){
-        display: none;
-    }
-
-    /*--------------------------------Servicios--------------------*/
-
-    .titulo-servicios .especialidad-contenedor .especialidad .especialidad-img{
-        flex-direction: column;         
-    }
-
-    .servicios .tratamientos .tecnica{
-        margin: 15px;
-    }
-
-    .servicios .tratamientos .tecnica img{
-        width: 400px;
-        height: auto;
-    }
-
-    .titulo-servicios .especialidad-contenedor .especialidad .especialidad-img img:nth-child(1){
-        display: none;
-    }
-
 }
 
 @media screen and (max-width:1024px){
-
-    /*--------------------------------Conócenos--------------------*/
-
-    .conocenos .integrantes .persona{
-        margin: 15px;
-    } 
-
-    /*--------------------------------Servicios--------------------*/
-
-    .servicios .tratamientos .tecnica{
-        flex-direction: column;       
-    }       
-
-    /*--------------------------------Turnos--------------------*/
-
-    .principal-turnos a{        
-        font-size: 30px;       
-        padding: 10px;         
+    main{        
+        /*--------------------------------Conócenos--------------------*/
+        .conocenos{
+            .integrantes{
+                .persona{
+                    margin: 15px;
+                }
+            }
+        }     
+        /*--------------------------------Servicios--------------------*/
+        .servicios{
+            .tratamientos{
+                .tecnica{
+                    flex-direction: column;
+                }
+            }
+        }       
+        /*--------------------------------Turnos--------------------*/        
+        .principal-turnos{
+            a{        
+                font-size: 30px;       
+                padding: 10px;
+            }         
+        }         
     }
-    
 }
 
 @media screen and (max-width:768px){
-
-    .grid-contenedor{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 56px auto 70px;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";     
+    main{        
+        .grid-contenedor{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 56px auto 70px;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";     
+        }
+        /*--------------------------------Index--------------------*/  
+        .hero{
+            div{
+                width: 650px;
+                h2{
+                    font-size: 43px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+        }   
+        .titulo-bienvenidos{
+            .bienvenidos{
+                .bienvenidos-img{        
+                    flex-direction: column;
+                    img{        
+                        width: 400px;
+                        height: 500px;
+                        &:nth-child(3){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }             
+        /*--------------------------------Conócenos--------------------*/
+        .principal-conocenos{
+            h2{
+                font-size: 43px;
+                text-align: center;
+            }
+        }    
+        .titulo-conocenos{
+            h2{
+                font-size: 25px;
+                text-align: center;
+            }
+            .consultorio{
+                .consultorio-text{
+                    font-size: 15px;
+                }
+                .consultorio-img{
+                    flex-direction: column;
+                }
+            }
+        }   
+        .conocenos{
+            h2{
+                font-size: 25px;
+                text-align: center;
+            }
+            .integrantes{
+                .persona{
+                    flex-direction: column;
+                    .persona-texto{
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        h3{
+                            font-size: 30px;
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }       
+        /*--------------------------------Servicios--------------------*/       
+        .principal-servicios{
+            h2{
+                font-size: 43px;
+                text-align: center;
+            }
+        }    
+        .titulo-servicios{
+            .especialidad-contenedor{
+                .especialidad{
+                    .especialidad-text{
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }    
+        .servicios{
+            .tratamientos{
+                .tecnica{
+                    .tecnica-texto{
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }    
     }
-
-    /*--------------------------------Index--------------------*/
-
-    .hero div{
-        width: 650px;
-    }
-
-    .titulo-bienvenidos .bienvenidos .bienvenidos-img{        
-        flex-direction: column;
-    }
-
-    .titulo-bienvenidos .bienvenidos .bienvenidos-img img{        
-        width: 400px;
-        height: 500px;
-    }
-
-    .titulo-bienvenidos .bienvenidos .bienvenidos-img img:nth-child(3){        
-        display: none;
-    }
-
+    /*-------------------------Fixed - Index-------------------*/
     .fixed{
         display: none;
     }
-
-    /*--------------------------------Conócenos--------------------*/
-
-    .titulo-conocenos .consultorio .consultorio-img{
-        flex-direction: column;
-    }
-
-    .conocenos .integrantes .persona{
-        flex-direction: column;
-    }
-
-    .conocenos .integrantes .persona .persona-texto{
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
-    .principal-conocenos h2, .principal-servicios h2, .hero div h2 {
-        font-size: 43px;
-        text-align: center;
-    }
-
-    .titulo-conocenos h2, .conocenos h2, .hero div p{
-        font-size: 25px;
-        text-align: center;
-    }
-
-    .titulo-conocenos .consultorio .consultorio-text{
-        font-size: 15px;
-    }   
-
-    .conocenos .integrantes .persona .persona-texto h3{
-        font-size: 30px;
-    }
-
-    .conocenos .integrantes .persona .persona-texto p{
-        font-size: 15px;
-    } 
-
-    /*--------------------------------Servicios--------------------*/
-
-    .servicios .tratamientos .tecnica .tecnica-texto{
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
-    .servicios .tratamientos .tecnica .tecnica-texto h3{
-        text-align: center;
-    }
-
-    .titulo-servicios .especialidad-contenedor .especialidad .especialidad-text{
-        padding-right: 10px;
-        padding-left: 10px;
-    }    
-
 }
 
 @media screen and (max-width:650px){
-
-    /*--------------------------------Index-------------------*/
-
-    .titulo-servicios .especialidad-contenedor .especialidad .especialidad-img img{
-        width: 320px;
-        height: auto;         
-    }   
-
-    .hero div{
-        width: 320px;
-        align-items: center;
+    main{        
+        /*--------------------------------Index-------------------*/
+        .hero{
+            div{
+                width: 320px;
+                align-items: center;
+                h2{
+                    width: 320px;
+                    font-size: 30px;
+                    margin-left: 0px;
+                }
+                p{        
+                    font-size: 20px;  
+                    width: 320px;      
+                }
+            }
+        }               
+        .titulo-bienvenidos{
+            h2{
+                font-size: 20px;
+            }
+            .bienvenidos{
+                .bienvenidos-text{
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+                .bienvenidos-img{
+                    img{
+                    width: 320px;
+                    height: 450px;
+                    }
+                }
+            }
+        }   
+        .ubicacion{
+            h2{
+                font-size: 20px;
+            }
+            .ubicacion-map{
+                margin: 0px;
+                padding: 0px; 
+                iframe{        
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }              
+        /*--------------------------------Conócenos-------------------*/    
+        .principal-conocenos{
+            h2{
+                font-size: 30px;
+            }
+        }   
+        .titulo-conocenos{
+            h2{
+                font-size: 20px;
+            }
+            .consultorio{
+                .consultorio-text{
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .consultorio-img{
+                    img {
+                        width: 320px;
+                    }
+                }
+            }
+        }     
+        .conocenos{
+            h2{
+                font-size: 20px;
+            }
+            .integrantes{
+                .persona{
+                    img{
+                        width: 310px;
+                        height: auto;
+                    }
+                }
+            }
+        }    
+        /*--------------------------------Servicios-------------------*/        
+        .titulo-servicios{
+            .especialidad-contenedor{
+                .especialidad{
+                    .especialidad-img{
+                        img{
+                            width: 320px;
+                            height: auto;       
+                        }
+                    }
+                }
+            }
+        }    
+        .servicios{
+            .tratamientos{
+                .tecnica{
+                    img{
+                        width: 310px;
+                        height: auto;
+                    }
+                }
+            }
+        }   
+        /*--------------------------------Contactos-------------------*/     
+        .contacto{
+            form{                 
+                width: 90%;    
+            }  
+        }
     }
-
-    .hero div h2{
-        width: 320px;
-        font-size: 30px;
-        margin-left: 0px;
-    }
-    .hero div p{        
-        font-size: 20px;  
-        width: 320px;      
-    }
-
-    .titulo-bienvenidos .bienvenidos .bienvenidos-img img{
-        width: 320px;
-        height: 450px;
-    }
-
-    .titulo-bienvenidos .bienvenidos .bienvenidos-text{
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-   
-    .ubicacion .ubicacion-map iframe{        
-        width: 300px;
-        height: 300px;
-    }    
-
-   .titulo-bienvenidos h2, .ubicacion h2{
-        font-size: 20px;
-    }
-
-    .ubicacion .ubicacion-map{    
-        margin: 0px;
-        padding: 0px;   
-    }
-        
-    /*--------------------------------Conócenos-------------------*/
-
-    .titulo-conocenos .consultorio .consultorio-text{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .titulo-conocenos .consultorio .consultorio-img img {
-        width: 320px;
-    }
-
-    .principal-conocenos h2{
-        font-size: 30px;
-    }
-
-    .titulo-conocenos h2, .conocenos h2{
-        font-size: 20px;
-    }
-
-    .conocenos .integrantes .persona img{
-        width: 310px;
-        height: auto;
-    }
-
-    /*--------------------------------Servicios-------------------*/    
-
-    .servicios .tratamientos .tecnica img{
-        width: 310px;
-        height: auto;
-    }
-    
-    /*--------------------------------Contactos-------------------*/  
-
-    .contacto form{
-        width: 335px;        
-    }
-
 }
