@@ -22,15 +22,14 @@ header{
             #navbarNavAltMarkup{
                 .navbar-nav{
                     flex: 1;
-                    margin: auto;
-                    display: flex;
-                    justify-content: space-between;
+                    margin: auto;                    
+                    @include flex(flex, space-between, start);                    
                     padding-left: 10px; 
                     padding-right: 50px;
                     .nav-link{
                         color: white;
                         &:hover {
-                            color: #693f3f; 
+                            color: $color-principal;  
                         }
                     }
                 }

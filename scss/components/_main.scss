@@ -1,3 +1,5 @@
+@import "../base/variables";
+
 main{
     /*----------------INDEX-MAIN----------------------*/
     grid-area: main;
@@ -9,9 +11,7 @@ main{
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);        
         font-family: 'Roboto', sans-serif;
         div{
             color: #F0E7D8;
@@ -29,20 +29,12 @@ main{
                 font-size: 30px;
                 color: white;
             }  
-            a{  
-                text-decoration: none;
-                cursor: pointer; 
-                color: #ffffff;
-                background-color: #000000;    
+            a{                    
                 font-size: 20px;
                 padding: 15px;
-                box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);  
-                transition-property: color; 
-                transition-duration: 0.3s;
+                @extend %button;                
                 &:hover{
-                    color: #693f3f;      
+                    color: $color-principal;      
                 }  
             }
         }
@@ -55,15 +47,14 @@ main{
             text-align: center;
             border: 1px solid white;
             color: white;
-            background: #693f3f;
+            background: $color-principal;
             margin:0px; 
         }
         .bienvenidos{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex(flex, space-between, center);            
+             flex-direction: column;            
             font-family: 'Roboto', sans-serif;
-            background: #00000027;
+            background: $color-secundario;
             .bienvenidos-text{
                 padding-left: 10%;
                 padding-right: 10%;
@@ -71,7 +62,7 @@ main{
                 margin-bottom: 25px;
                 margin-left: 2%;
                 margin-right: 2%;
-                color: rgb(105, 63, 63);    
+                color: $color-principal;    
                 text-align: justify; 
                 font-size: 20px;
                 p{
@@ -79,42 +70,30 @@ main{
                 }
             }
             .bienvenidos-img{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
+                @include flex(flex, space-around, center);               
                 padding-top: 20px;
                 padding-bottom: 40px; 
                 width: auto; 
                 img{
                     width: auto;
                     height: 500px;
-                    border: 1px solid rgb(105, 63, 63);
+                    border: 1px solid $color-principal; 
                 }
             }
-            a{
-                text-decoration: none;
-                cursor: pointer; 
-                color: #ffffff;
-                background-color: #000000;
+            a{               
                 padding: 20px 25px 20px 25px;
                 margin-top:20px;
                 margin-bottom: 50px;
-                box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                transition-property: color; 
-                transition-duration: 0.3s; 
+                @extend %button;   
                 &:hover{
-                    color: #693f3f;
+                    color: $color-principal;
                 }
             }
         }
     }   
     /*-----------------------Sección Mapa-------------------*/
     .ubicacion{
-        background: hsl(0, 0%, 79%);  
-        padding-bottom: 20px;
+        background: hsl(0, 0%, 79%);   
         h2{
             font-size: 35px;
             padding-top: 45px;
@@ -122,26 +101,26 @@ main{
             text-align: center;
             border: 2px solid white;
             color: white;
-            background: #693f3f;
+            background: $color-principal;
+            margin: 0px;
         }
         .ubicacion-map{
-            display: flex;
-            justify-content: space-around;
-            align-items: center; 
+            @include flex(flex, space-around, center);            
             padding: 50px;
+            background: $color-secundario;           
             p{
                 margin-left: 50px;
                 margin-right: 50px;
                 font-size: 20px;
                 font-family: 'Roboto', sans-serif;
-                color: #693f3f; 
+                color: $color-principal; 
             }
             iframe{
-                border: 1px solid rgb(105, 63, 63); 
+                border: 1px solid $color-principal; 
                 box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
                 -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
                 -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                background: hsl(0, 0%, 61%);
+                background: $color-terciario;
             }
         }
     }
@@ -154,9 +133,7 @@ main{
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);        
         font-family: 'Roboto', sans-serif;
         h2{
             font-size: 55px;
@@ -172,20 +149,19 @@ main{
             text-align: center;
             border: 1px solid white;
             color: white;
-            background: #693f3f;
+            background: $color-principal;
         }
-        .consultorio{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .consultorio{            
+            @include flex(flex, space-around, center);
+            flex-direction: column;            
             font-family: 'Roboto', sans-serif;
-            background: #00000027;
+            background: $color-secundario;
             .consultorio-text{
                 padding-left: 10%;
                 padding-right: 10%;
                 margin-top: 25px;
                 margin-bottom: 25px;
-                color: rgb(105, 63, 63);    
+                color: $color-principal;    
                 text-align: justify; 
                 font-size: 20px;
                 p{
@@ -193,22 +169,20 @@ main{
                 }
             }
             .consultorio-img{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;    
+                @include flex(flex, space-between, center);                    
                 padding-top: 20px;
                 padding-bottom: 40px;  
                 img{
                     width: 350px;
                     height: 450px;
-                    border: 1px solid rgb(105, 63, 63); 
+                    border: 1px solid $color-principal; 
                 }
             }
         }   
     }
     .conocenos{
         font-family: 'Roboto', sans-serif;
-        background: hsl(0, 0%, 79%);
+        background: $color-secundario;
         h2{
             margin:0px;
             font-size: 35px;
@@ -217,30 +191,27 @@ main{
             text-align: center;
             border: 1px solid white;
             color: white;
-            background: #693f3f;
+            background: $color-principal;
         }
         .integrantes{
             padding-bottom: 70px;
             .persona{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include flex(flex, space-between, center);
                 margin: 50px 150px 50px 150px;
-                border: 1px solid rgb(105, 63, 63); 
+                border: 1px solid $color-principal; 
                 box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
                 -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
                 -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                background: hsl(0, 0%, 61%);
+                background: $color-terciario;
                 .persona-texto{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    @include flex(flex, space-between, center);                    
+                    flex-direction: column;                    
                     padding: 35px;
                     text-align: justify;
                     h3{
                         font-size: 35px;
                         margin-bottom: 50px;
-                        color:rgb(105, 63, 63);
+                        color:$color-principal; 
                     }
                     p{
                         margin: 20px;
@@ -265,9 +236,7 @@ main{
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);
         font-family: 'Roboto', sans-serif;
         h2{
             font-size: 55px;
@@ -284,20 +253,19 @@ main{
                 text-align: center;
                 border: 1px solid white;
                 color: white;
-                background: #693f3f;
+                background: $color-principal;
             }
             .especialidad{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                @include flex(flex, space-between, center);                
+                flex-direction: column;                
                 font-family: 'Roboto', sans-serif;
-                background: #00000027;
+                background: $color-secundario;
                 .especialidad-text{
                     padding-left: 10%;
                     padding-right: 10%;
                     margin-top: 25px;
                     margin-bottom: 25px;
-                    color: rgb(105, 63, 63);    
+                    color: $color-principal;    
                     text-align: justify; 
                     font-size: 20px;
                     p{
@@ -305,15 +273,13 @@ main{
                     }
                 }
                 .especialidad-img{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    @include flex(flex, space-between, center);                  
                     padding-top: 20px;
                     padding-bottom: 40px;  
                     img{
                         width: 500px;
                         height: auto;
-                        border: 1px solid rgb(105, 63, 63);  
+                        border: 1px solid $color-principal;  
                     }
                 }
             }
@@ -321,7 +287,7 @@ main{
     }
     .servicios{
         font-family: 'Roboto', sans-serif;
-        background: hsl(0, 0%, 79%);
+        background: $color-secundario;
         h2{
             margin: 0px;
             font-size: 35px;
@@ -330,30 +296,28 @@ main{
             text-align: center;
             border: 1px solid white;
             color: white;
-            background: #693f3f;
+            background: $color-principal;
         }
         .tratamientos{
             padding-bottom: 70px;
             .tecnica{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include flex(flex, space-between, center);
                 margin: 50px 150px 50px 150px;
-                border: 1px solid rgb(105, 63, 63); 
+                border: 1px solid $color-principal; 
                 box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
                 -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
                 -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-                background: hsl(0, 0%, 61%);
+                background: $color-terciario;
                 .tecnica-texto{
-                    display: flex;
+                    @include flex(flex, space-between, center);            
                     flex-direction: column;
-                    align-items: center;
                     padding: 35px;
                     text-align: justify;
+                   
                     h3{
                         font-size: 35px;
                         margin-bottom: 50px;
-                        color:rgb(105, 63, 63); 
+                        color:$color-principal; 
                     }
                     p{
                         margin: 20px;
@@ -363,7 +327,7 @@ main{
                     img{
                         width: auto;
                         height: 500px;
-                        padding: 10px;
+                        padding: 10px;                        
                     }
                 }
             }
@@ -378,9 +342,7 @@ main{
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);
         font-family: 'Roboto', sans-serif; 
         padding-bottom: 450px;  
         padding-top: 500px; 
@@ -449,23 +411,14 @@ main{
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);
         font-family: 'Roboto', sans-serif;
-        a{
-            text-decoration: none;
-            font-size: 40px;
-            color: #ffffff;
-            background-color: #000000;
-            box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-            -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-            -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
+        a{            
+            font-size: 40px;            
             padding: 15px;
-            transition-property: color; 
-            transition-duration: 0.3s; 
+            @extend %button; 
             &:hover{
-                color: #693f3f;
+                color: $color-principal;
             }
         }
     }
@@ -474,7 +427,7 @@ main{
     position: fixed;
     right: 3%;
     bottom: 10%;
-    background-color: #693f3f;
+    background-color: $color-principal; 
     color: white;    
     text-align: center;
     width: 150px;
@@ -483,9 +436,7 @@ main{
     box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(flex, center, center);
     font-family: 'Roboto', sans-serif;
     div{
         h2{

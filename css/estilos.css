@@ -15,78 +15,28 @@
   grid-auto-flow: row;
   grid-template-areas: "header header" "main main" "footer footer"; }
 
-/*---Ejemplo-----
-h1{
-    font-size: nth($font-size, 2);
-    color: nth($colores, 1);
-}
-*/
-/*---Ejemplo-----
- img{
-    width: $ancho - 20;
- }
-*/
-/*---Ejemplo-----
+main .hero div a, main .titulo-bienvenidos .bienvenidos a, main .principal-turnos a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  transition-property: color;
+  transition-duration: 0.3s; }
 
-.boton{
-    background-color: map-get($button, bg-btn);
-    border: map-get($button, border-btn);
-}
-*/
-/*---Ejemplo-----
+main .hero div a, main .titulo-bienvenidos .bienvenidos a, main .principal-turnos a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  transition-property: color;
+  transition-duration: 0.3s; }
 
-.galeria{
-    @extend %flex;
-}
-
-*/
-/*---Ejemplo-----
-
-.contenedor-1{
-    @include flex(flex, space-between, center)
-}
-
-.contenedor-2{
-    @include flex(flex, space-around, center)
-}
-
-*/
-/*---Ejemplo-----
-h1{
-    font-size: nth($font-size, 2);
-    color: nth($colores, 1);
-}
-*/
-/*---Ejemplo-----
- img{
-    width: $ancho - 20;
- }
-*/
-/*---Ejemplo-----
-
-.boton{
-    background-color: map-get($button, bg-btn);
-    border: map-get($button, border-btn);
-}
-*/
-/*---Ejemplo-----
-
-.galeria{
-    @extend %flex;
-}
-
-*/
-/*---Ejemplo-----
-
-.contenedor-1{
-    @include flex(flex, space-between, center)
-}
-
-.contenedor-2{
-    @include flex(flex, space-around, center)
-}
-
-*/
 /*----------------HEADER----------------------*/
 header {
   grid-area: header;
@@ -106,12 +56,24 @@ header {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: start;
     padding-left: 10px;
     padding-right: 50px; }
     header nav .container-fluid #navbarNavAltMarkup .navbar-nav .nav-link {
       color: white; }
       header nav .container-fluid #navbarNavAltMarkup .navbar-nav .nav-link:hover {
         color: #693f3f; }
+
+main .hero div a, main .titulo-bienvenidos .bienvenidos a, main .principal-turnos a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  transition-property: color;
+  transition-duration: 0.3s; }
 
 main {
   /*----------------INDEX-MAIN----------------------*/
@@ -148,17 +110,8 @@ main {
         font-size: 30px;
         color: white; }
       main .hero div a {
-        text-decoration: none;
-        cursor: pointer;
-        color: #ffffff;
-        background-color: #000000;
         font-size: 20px;
-        padding: 15px;
-        box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-        transition-property: color;
-        transition-duration: 0.3s; }
+        padding: 15px; }
         main .hero div a:hover {
           color: #693f3f; }
   main .titulo-bienvenidos h2 {
@@ -172,10 +125,11 @@ main {
     margin: 0px; }
   main .titulo-bienvenidos .bienvenidos {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    background: #00000027; }
+    background: #dddddd; }
     main .titulo-bienvenidos .bienvenidos .bienvenidos-text {
       padding-left: 10%;
       padding-right: 10%;
@@ -190,7 +144,6 @@ main {
         padding: 10px; }
     main .titulo-bienvenidos .bienvenidos .bienvenidos-img {
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
       align-items: center;
       padding-top: 20px;
@@ -201,23 +154,13 @@ main {
         height: 500px;
         border: 1px solid #693f3f; }
     main .titulo-bienvenidos .bienvenidos a {
-      text-decoration: none;
-      cursor: pointer;
-      color: #ffffff;
-      background-color: #000000;
       padding: 20px 25px 20px 25px;
       margin-top: 20px;
-      margin-bottom: 50px;
-      box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-      transition-property: color;
-      transition-duration: 0.3s; }
+      margin-bottom: 50px; }
       main .titulo-bienvenidos .bienvenidos a:hover {
         color: #693f3f; }
   main .ubicacion {
-    background: #c9c9c9;
-    padding-bottom: 20px; }
+    background: #c9c9c9; }
     main .ubicacion h2 {
       font-size: 35px;
       padding-top: 45px;
@@ -225,12 +168,14 @@ main {
       text-align: center;
       border: 2px solid white;
       color: white;
-      background: #693f3f; }
+      background: #693f3f;
+      margin: 0px; }
     main .ubicacion .ubicacion-map {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 50px; }
+      padding: 50px;
+      background: #dddddd; }
       main .ubicacion .ubicacion-map p {
         margin-left: 50px;
         margin-right: 50px;
@@ -269,10 +214,11 @@ main {
     background: #693f3f; }
   main .titulo-conocenos .consultorio {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    background: #00000027; }
+    background: #dddddd; }
     main .titulo-conocenos .consultorio .consultorio-text {
       padding-left: 10%;
       padding-right: 10%;
@@ -295,7 +241,7 @@ main {
         border: 1px solid #693f3f; }
   main .conocenos {
     font-family: 'Roboto', sans-serif;
-    background: #c9c9c9; }
+    background: #dddddd; }
     main .conocenos h2 {
       margin: 0px;
       font-size: 35px;
@@ -319,8 +265,9 @@ main {
         background: #9c9c9c; }
         main .conocenos .integrantes .persona .persona-texto {
           display: flex;
-          flex-direction: column;
+          justify-content: space-between;
           align-items: center;
+          flex-direction: column;
           padding: 35px;
           text-align: justify; }
           main .conocenos .integrantes .persona .persona-texto h3 {
@@ -361,10 +308,11 @@ main {
     background: #693f3f; }
   main .titulo-servicios .especialidad-contenedor .especialidad {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    background: #00000027; }
+    background: #dddddd; }
     main .titulo-servicios .especialidad-contenedor .especialidad .especialidad-text {
       padding-left: 10%;
       padding-right: 10%;
@@ -387,7 +335,7 @@ main {
         border: 1px solid #693f3f; }
   main .servicios {
     font-family: 'Roboto', sans-serif;
-    background: #c9c9c9; }
+    background: #dddddd; }
     main .servicios h2 {
       margin: 0px;
       font-size: 35px;
@@ -411,8 +359,9 @@ main {
         background: #9c9c9c; }
         main .servicios .tratamientos .tecnica .tecnica-texto {
           display: flex;
-          flex-direction: column;
+          justify-content: space-between;
           align-items: center;
+          flex-direction: column;
           padding: 35px;
           text-align: justify; }
           main .servicios .tratamientos .tecnica .tecnica-texto h3 {
@@ -502,16 +451,8 @@ main {
     align-items: center;
     font-family: 'Roboto', sans-serif; }
     main .principal-turnos a {
-      text-decoration: none;
       font-size: 40px;
-      color: #ffffff;
-      background-color: #000000;
-      box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
-      padding: 15px;
-      transition-property: color;
-      transition-duration: 0.3s; }
+      padding: 15px; }
       main .principal-turnos a:hover {
         color: #693f3f; }
 
@@ -538,6 +479,17 @@ main {
     margin-bottom: 7px; }
   .fixed div p {
     font-size: 14px; }
+
+main .hero div a, main .titulo-bienvenidos .bienvenidos a, main .principal-turnos a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.75);
+  transition-property: color;
+  transition-duration: 0.3s; }
 
 /*-----------------------------FOOTER---------------------------*/
 footer {
