@@ -14,7 +14,7 @@ main{
         @include flex(flex, center, center);        
         font-family: 'Roboto', sans-serif;
         div{
-            color: #F0E7D8;
+            color: white;
             text-align: center;
             h2{
                 font-size: 55px;
@@ -52,7 +52,7 @@ main{
         }
         .bienvenidos{
             @include flex(flex, space-between, center);            
-             flex-direction: column;            
+            flex-direction: column;            
             font-family: 'Roboto', sans-serif;
             background: $color-secundario;
             .bienvenidos-text{
